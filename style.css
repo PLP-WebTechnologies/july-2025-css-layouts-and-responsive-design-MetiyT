@@ -1,0 +1,103 @@
+/* === Global Styles === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* === HEADER === */
+.site-header {
+  background: #333;
+  color: #fff;
+  padding: 1rem;
+}
+
+.site-header h1 {
+  margin-bottom: 0.5rem;
+}
+
+/* Flexbox for navigation */
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.main-nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* === GRID LAYOUT (Main Area) === */
+.grid-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.content {
+  background: #f4f4f4;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.sidebar {
+  background: #e2e2e2;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+/* === Flexbox Cards === */
+.card-container {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.card {
+  flex: 1;
+  background: #ddd;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 8px;
+}
+
+/* === FOOTER === */
+.site-footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* === MEDIA QUERIES === */
+
+/* Tablet View */
+@media (max-width: 900px) {
+  .grid-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .main-nav ul {
+    flex-wrap: wrap;
+  }
+}
+
+/* Mobile View */
+@media (max-width: 600px) {
+  .main-nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .card-container {
+    flex-direction: column;
+  }
+}
